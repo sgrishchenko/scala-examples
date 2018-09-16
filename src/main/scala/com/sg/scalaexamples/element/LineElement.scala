@@ -1,4 +1,4 @@
-package com.sg.scalaexamples
+package com.sg.scalaexamples.element
 
 class LineElement(s: String) extends Element {
   val contents = Array(s)

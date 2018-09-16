@@ -1,9 +1,19 @@
 package com.sg.scalaexamples
 
-import Spiral.spiral
+import com.sg.scalaexamples.intqueue.BasicIntQueue
+import com.sg.scalaexamples.intqueue.Doubling
+import com.sg.scalaexamples.intqueue.Incrementing
 
 object Main extends App {
-  val nSides = 17
-  println(spiral(nSides))
+  val queue = new BasicIntQueue
+    with Incrementing
+    with Doubling
+
+  queue.put(10)
+  queue.put(20)
+
+  println(queue.get())
+  println(queue.get())
+
 }
 

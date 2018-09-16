@@ -1,4 +1,4 @@
-package com.sg.scalaexamples
+package com.sg.scalaexamples.element
 
 class ArrayElement(
   val contents: Array[String]

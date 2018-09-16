@@ -1,6 +1,6 @@
-package com.sg.scalaexamples
+package com.sg.scalaexamples.element
 
-import Element.elem
+import com.sg.scalaexamples.element.Element.elem
 
 object Spiral {
   private val space = elem(" ")

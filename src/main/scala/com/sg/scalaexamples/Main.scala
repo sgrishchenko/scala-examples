@@ -1,7 +1,9 @@
 package com.sg.scalaexamples
 
-object Main extends App {
-  val elem = new UniformElement('u', 3, 4)
+import Spiral.spiral
 
-  println(elem)
+object Main extends App {
+  val nSides = 17
+  println(spiral(nSides))
 }
+

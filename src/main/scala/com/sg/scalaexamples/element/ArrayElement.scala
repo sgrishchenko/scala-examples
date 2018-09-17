@@ -5,7 +5,8 @@ class ArrayElement(
 ) extends Element {
   if (height > 0)
     require(
-      contents.tail.forall(_.length == contents.head.length)
+      contents.tail.forall(_.length == contents.head.length),
+      "All lines in ArrayElement should have the same length."
     )
 
   def this(contents: String*) = this(contents.toArray)

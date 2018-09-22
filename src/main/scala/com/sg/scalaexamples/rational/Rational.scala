@@ -1,4 +1,5 @@
 package com.sg.scalaexamples.rational
+import scala.language.implicitConversions
 
 object Rational {
   implicit def intToRational(x: Int): Rational = new Rational(x)

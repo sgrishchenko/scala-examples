@@ -50,6 +50,8 @@ object RnaSeq {
 
   def apply(bases: Base*): RnaSeq = fromSeq(bases)
 
+  def unapplySeq(arg: RnaSeq): Option[Seq[Base]] = Some(arg)
+
   def newBuilder: mutable.Builder[Base, RnaSeq] =
     new ArrayBuffer[Base] mapResult fromSeq
 

@@ -15,22 +15,22 @@ abstract class CCTherm {
   def toXML: Elem =
     <cctherm>
       <description>
-        {description}
+        { description }
       </description>
       <yearMade>
-        {yearMade}
+        { yearMade }
       </yearMade>
       <dateObtained>
-        {dateObtained}
+        { dateObtained }
       </dateObtained>
       <bookPrice>
-        {bookPrice}
+        { bookPrice }
       </bookPrice>
       <purchasePrice>
-        {purchasePrice}
+        { purchasePrice }
       </purchasePrice>
       <condition>
-        {condition}
+        { condition }
       </condition>
     </cctherm>
 }

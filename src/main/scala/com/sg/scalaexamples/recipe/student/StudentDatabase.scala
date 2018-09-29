@@ -1,6 +1,6 @@
 package com.sg.scalaexamples.recipe.student
 
-import com.sg.scalaexamples.recipe.base.{Database, Food, Recipe}
+import com.sg.scalaexamples.recipe.base.{ Database, Food, Recipe }
 
 object StudentDatabase extends Database {
 
@@ -9,7 +9,8 @@ object StudentDatabase extends Database {
   object HeatItUp extends Recipe(
     "heat it up",
     List(FrozenFood),
-    "Microwave the 'food' for 10 minutes.")
+    "Microwave the 'food' for 10 minutes."
+  )
 
   def allFoods = List(FrozenFood)
 

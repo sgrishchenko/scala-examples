@@ -1,6 +1,6 @@
 package com.sg.scalaexamples.recipe.simple
 
-import com.sg.scalaexamples.recipe.base.{Recipe, Recipes}
+import com.sg.scalaexamples.recipe.base.{ Recipe, Recipes }
 
 trait SimpleRecipes extends Recipes {
   this: SimpleFoods =>

@@ -6,7 +6,7 @@ import scala.collection.immutable
 
 class PrefixMap[T]
   extends mutable.Map[String, T]
-    with mutable.MapLike[String, T, PrefixMap[T]] {
+  with mutable.MapLike[String, T, PrefixMap[T]] {
 
   var suffixes: immutable.Map[Char, PrefixMap[T]] = Map.empty
   var value: Option[T] = None
@@ -37,8 +37,7 @@ class PrefixMap[T]
       val prev = value
       value = None
       prev
-    }
-    else suffixes
+    } else suffixes
       .get(s(0))
       .flatMap(_.remove(s substring 1))
 
@@ -80,8 +79,7 @@ object PrefixMap {
     new mutable.MapBuilder[String, T, PrefixMap[T]](empty)
 
   implicit def canBuildFrom[T]: CanBuildFrom[PrefixMap[_], (String, T), PrefixMap[T]] =
-    new CanBuildFrom[PrefixMap[_], (String, T),
-      PrefixMap[T]] {
+    new CanBuildFrom[PrefixMap[_], (String, T), PrefixMap[T]] {
       def apply(from: PrefixMap[_]): mutable.Builder[(String, T), PrefixMap[T]] = newBuilder[T]
 
       def apply(): mutable.Builder[(String, T), PrefixMap[T]] = newBuilder[T]

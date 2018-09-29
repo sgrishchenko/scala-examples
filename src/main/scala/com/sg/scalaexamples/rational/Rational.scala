@@ -10,8 +10,8 @@ class Rational(n: Int, d: Int) extends Ordered[Rational] {
 
   private val g = gcd(n.abs, d.abs)
 
-  val numer: Int = n / g
-  val denom: Int = d / g
+  val numer: Int = (if (d < 0) -n else n) / g
+  val denom: Int = d.abs / g
 
   def this(n: Int) = this(n, 1)
 
@@ -50,5 +50,19 @@ class Rational(n: Int, d: Int) extends Ordered[Rational] {
   override def compare(that: Rational): Int =
     (this.numer * that.denom) - (that.numer * this.denom)
 
+  def canEqual(other: Any): Boolean = other.isInstanceOf[Rational]
+
+  override def equals(other: Any): Boolean = other match {
+    case that: Rational =>
+      (that canEqual this) &&
+        numer == that.numer &&
+        denom == that.denom
+    case _ => false
+  }
+
+  override def hashCode(): Int = {
+    val state = Seq(numer, denom)
+    state.map(_.hashCode()).foldLeft(0)((a, b) => 31 * a + b)
+  }
 }
 

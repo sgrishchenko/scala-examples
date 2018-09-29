@@ -7,6 +7,6 @@ trait SimpleFoodCategories extends FoodCategories {
 
   def allCategories: List[FoodCategory] = List(
     FoodCategory("fruits", List(Apple, Orange)),
-    FoodCategory("misc", List(Cream, Sugar)),
+    FoodCategory("misc", List(Cream, Sugar))
   )
 }

@@ -2,9 +2,9 @@ package com.sg.scalaexamples.rna
 
 import scala.collection.generic.CanBuildFrom
 import scala.collection.mutable.ArrayBuffer
-import scala.collection.{IndexedSeqLike, mutable}
+import scala.collection.{ IndexedSeqLike, mutable }
 
-final class RnaSeq private(
+final class RnaSeq private (
   val groups: Array[Int],
   val length: Int
 ) extends IndexedSeq[Base] with IndexedSeqLike[Base, RnaSeq] {

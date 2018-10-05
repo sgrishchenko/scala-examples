@@ -1,7 +1,7 @@
 package com.sg.scalaexamples.currency
 
 object Converter {
-  var exchangeRate = Map(
+  val exchangeRate = Map(
     "USD" -> Map(
       "USD" -> 1.0,
       "EUR" -> 0.7596,

@@ -1,4 +1,4 @@
-package com.sg.scalaexamples.gui
+package com.sg.scalaexamples.tempconverter
 
 import scala.swing._
 import event._
